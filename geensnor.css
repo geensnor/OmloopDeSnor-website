@@ -1,0 +1,53 @@
+
+h1{
+	color: orange;
+	text-align: center;
+	margin-top: 30px;
+	font-size: 60px;
+}
+
+h2{
+	color: orange;
+	text-align: center;
+	font-size: 40px;
+}
+
+h3{
+	font-size: 50px;
+	text-align: center;
+}
+
+.lead{
+	text-align: center;
+}
+
+.info{
+	margin-top: 30px;
+}
+
+.info  li{
+	font-size: 30px;
+	list-style-type: none;
+}
+
+.menu{
+	text-align: center;
+}
+
+.lijst-edities{
+	margin-top: 50px;
+}
+
+.eerdere-editie, .weetjes, .strava{
+	margin-top: 50px;
+}
+
+.eerdere-editie li{
+	font-size: 30px;
+	list-style-type: none;
+}
+
+.weetjes-lijst li{
+	margin-top: 10px;
+	font-size: 18px;
+}
