@@ -12,4 +12,4 @@ jobs:
         FTP_SERVER: jorisxl2.two.axc.nl
         FTP_USERNAME: omloop
         FTP_PASSWORD: ${{ secrets.ftppassword }}
-        ARGS: --delete --dry-run
+        ARGS: --exclude-glob=.git*/** --exclude-glob=.git**
