@@ -9,7 +9,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
-        FTP_SERVER: ftp://jorisxl2.two.axc.nl
-        FTP_USERNAME: omloop
+        FTP_SERVER: jorisxl2.two.axc.nl
+        FTP_USERNAME: omloop@jorisxl2.two.axc.nl
         FTP_PASSWORD: ${{ secrets.ftppassword }}
         ARGS: --exclude-glob=.git*/** --exclude-glob=.git**
