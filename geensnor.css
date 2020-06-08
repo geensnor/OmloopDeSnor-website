@@ -27,8 +27,16 @@ h3{
 
 .info  li{
 	font-size: 30px;
-	list-style-type: none;
-}
+	margin: 0;
+	padding: 0 0 0 40px;
+	list-style: none;
+	background-image: url("favicon.ico");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 27px;
+ }
+
+
 
 .menu{
 	text-align: center;
