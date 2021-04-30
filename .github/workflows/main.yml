@@ -16,3 +16,17 @@ jobs:
         FTP_USERNAME: omloop@omloopdesnor.nl
         FTP_PASSWORD: ${{ secrets.ftppassword }}
         ARGS: --exclude-glob=.git*/** --exclude-glob=.git** --exclude=readme.md 
+  pin_to_ipfs:
+    runs-on: ubuntu-latest
+    name: Pin-IPFS
+    steps:
+    - uses: actions/checkout@v2
+    - name: IPFS Publish
+      id: IPFS
+      uses: alexanderschau/ipfs-pinning-action@v1.0.0
+      with:
+        path_to_add: 'https://www.omloopdesnor.nl/' #Required
+        endpoint: ${{ secrets.ENDPOINT }} #Required
+        access_token: ${{ secrets.ACCESS_TOKEN }} #Required
+        pin_name: 'ODS-GitHub-PIN' #Optional
+        
