@@ -28,5 +28,5 @@ jobs:
         path_to_add: '.' #Required
         endpoint: ${{ secrets.ENDPOINT }} #Required
         access_token: ${{ secrets.ACCESS_TOKEN }} #Required
-        pin_name: 'ODS-GitHub-PIN' #Optional
+        pin_name: 'OmloopDeSnor-website' #Optional
         
