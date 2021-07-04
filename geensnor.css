@@ -63,4 +63,15 @@ footer {
 	text-align: center;
 	padding: 7px;
 	color: black;
-  }
+}
+.eerdere-editie-container {
+	background-color: lightyellow;
+	margin-top:50px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.eerdere-editie-container li {
+	font-size: 30px;
+	list-style-type: none;
+}
