@@ -1,23 +1,19 @@
-
 h1{
 	color: orange;
-	text-align: center;
 	margin-top: 30px;
 	font-size: 60px;
 }
 
 h2{
 	color: orange;
-	text-align: center;
 	font-size: 40px;
 }
 
 h3{
 	font-size: 50px;
-	text-align: center;
 }
 
-.lead{
+.lead, .menu, h1, h2, h3{
 	text-align: center;
 }
 
@@ -25,7 +21,7 @@ h3{
 	margin-top: 30px;
 }
 
-.info  li{
+.info li{
 	font-size: 30px;
 	margin: 0;
 	padding: 0 0 0 40px;
@@ -37,16 +33,7 @@ h3{
  }
 
 
-
-.menu{
-	text-align: center;
-}
-
-.lijst-edities{
-	margin-top: 50px;
-}
-
-.eerdere-editie, .weetjes, .strava{
+.eerdere-editie, .lijst-edities, .weetjes, .strava, .menu, footer{
 	margin-top: 50px;
 }
 
@@ -61,8 +48,9 @@ h3{
 }
 footer {
 	text-align: center;
-	padding: 7px;
+	padding: 15px;
 	color: black;
+	background-color: #fbfcfc;
 }
 .eerdere-editie-container {
 	background-color: #fbfcfc;
