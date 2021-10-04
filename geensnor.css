@@ -1,22 +1,42 @@
+@font-face {
+    font-family: omloop;
+    src: url(Raleway-Regular.ttf);
+}
+
 h1{
+	font-family: "omloop";
 	color: white;
-	margin-top: 30px;
+	margin-top: 0px;
 	font-size: 60px;
 	background-color: black;
+	text-transform: uppercase;
 }
 
 h2{
+	font-family: "omloop";
 	color: white;
 	font-size: 40px;
 	background-color: black;
+	text-transform: uppercase;
 }
 
 h3{
+	font-family: "omloop";
 	font-size: 50px;
 }
 
-.lead, .menu, h1, h2, h3{
-	text-align: center;
+.lead, h1, h2, h3
+{
+	text-align: left;
+}
+
+
+
+a, a:hover
+{
+	color:red;
+	font-family: "omloop";
+
 }
 
 .info{
@@ -24,6 +44,8 @@ h3{
 }
 
 .info li{
+	font-family: "omloop";
+
 	font-size: 30px;
 	margin: 0;
 	padding: 0 0 0 40px;
@@ -35,8 +57,9 @@ h3{
  }
 
 
-.eerdere-editie, .lijst-edities, .weetjes, .strava, .menu, footer{
+.eerdere-editie, .lijst-edities, .weetjes, .strava, footer{
 	margin-top: 50px;
+	
 }
 
 .eerdere-editie li{
@@ -47,6 +70,8 @@ h3{
 .weetjes-lijst li{
 	margin-top: 10px;
 	font-size: 18px;
+	font-family: "omloop";
+
 }
 footer {
 	text-align: center;
@@ -71,3 +96,33 @@ footer {
 .eerdere-editie-container h3 {
 	margin-bottom: 20px;
 }
+
+.topheader {
+	background-image: url("header.webp");
+	background-repeat: no-repeat; 
+  	background-size: cover; 
+}
+
+.menu, a.menu  {
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: black;
+	color:white;
+}
+
+a:hover.menu {
+	text-decoration: underline;
+
+}
+
+.titel {
+	margin-top:20px;
+background-color: black;
+}
+
+p {
+	font-family: "omloop";
+
+}
+
