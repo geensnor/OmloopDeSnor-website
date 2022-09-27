@@ -1,3 +1,3 @@
-# Website Omloop de Snor
+# Omloop De Snor website
 
-Op [http://www.omloopdesnor.nl](http://www.omloopdesnor.nl)
+Website van het belangrijkste wielrenevenemnt van het jaar: [www.omloopdesnor.nl](https://www.omloopdesnor.nl). 

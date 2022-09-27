@@ -1,0 +1,20 @@
+---
+import Editiesjson from "../../public/edities.json";
+
+const jaren = Editiesjson.map(function (element) {
+	return new Date(element.datum).getFullYear();
+});
+---
+
+<div class="text-center m-8">
+	<h2 class="text-center text-4xl font-semibold text-orange-500">Eerdere edities</h2>
+	<ul class="list-none">
+		{
+			jaren.map((jaar) => (
+				<li class="inline-block text-blue-600 hover:underline p-2">
+					<a href={`#jaar${jaar}`}>{jaar}</a>
+				</li>
+			))
+		}
+	</ul>
+</div>

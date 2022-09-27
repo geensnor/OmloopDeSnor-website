@@ -1,0 +1,38 @@
+---
+import EditieCard from "../components/EditieCard.astro";
+import Editiesjson from "../../public/edities.json";
+---
+
+<div id="eerdere-edities" class="grid justify-items-center">
+	{
+		Editiesjson.map(
+			({
+				naam,
+				datum,
+				start,
+				afstand,
+				hoogtemeters,
+				deelnemers,
+				fotoFilename,
+				gpxFile,
+				routeTitle,
+				routeURL,
+				aftermovieURL,
+			}) => (
+				<EditieCard
+					naam={naam}
+					datum={datum}
+					start={start}
+					afstand={afstand}
+					hoogtemeters={hoogtemeters}
+					deelnemers={deelnemers}
+					fotoFilename={fotoFilename}
+					gpxFile={gpxFile}
+					routeTitle={routeTitle}
+					routeURL={routeURL}
+					aftermovieURL={aftermovieURL}
+				/>
+			)
+		)
+	}
+</div>
