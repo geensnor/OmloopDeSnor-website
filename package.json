@@ -1,8 +1,7 @@
 {
   "name": "omloop-de-snor-website",
-  "description": "Website van jaarlijks wielrenevenement",
-  "version": "2.0.0",
-  "private": false,
+  "description": "Website van vet jaarlijks wielrenevenement",
+  "private": true,
   "homepage": "https://github.com/geensnor/OmloopDeSnor-website",
   "scripts": {
     "dev": "astro dev",
