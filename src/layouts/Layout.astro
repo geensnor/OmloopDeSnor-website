@@ -14,13 +14,16 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<script>
-			{
-				import.meta.env.PROD
-					? console.log("productie")
-					: console.log("dev");
-			}
-		</script>
+		{
+			import.meta.env.PROD && (
+				<script
+					async
+					defer
+					data-website-id="6d4b7ebb-94da-48b9-a5b6-f4836fdf23ac"
+					src="https://umami-geensnor.vercel.app/umami.js"
+				/>
+			)
+		}
 	</head>
 
 	<title>{title}</title>
