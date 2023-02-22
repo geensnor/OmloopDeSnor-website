@@ -8,57 +8,57 @@ import Slot from "../components/Slot.astro";
 ---
 
 <Layout title="Omloop de Snor 2023">
-	<div>
-		<h1 class="text-center text-6xl p-3 text-bold text-orange-600">
-			Omloop de Snor 2023
-		</h1>
-		<p class="text-center text-2xl p-3 text-gray-600">
-			Elfde editie van de toertocht voor liefhebbers!
-		</p>
-	</div>
+  <div>
+    <h1 class="text-center text-6xl p-3 text-bold text-orange-600">
+      Omloop de Snor 2023
+    </h1>
+    <p class="text-center text-2xl p-3 text-gray-600">
+      Elfde editie van de toertocht voor liefhebbers!
+    </p>
+  </div>
 
-	<div class="grid justify-items-center">
-		<div class="p-4">
-			<ul class="list-outside">
-				<li>Datum: ergens in 2023</li>
-				<li>Starttijd: nog onbekend</li>
-				<li>Start en finish: nog onbekend</li>
-				<li>Route: nog onbekend</li>
-			</ul>
-		</div>
-		<div class="p-4 max-w-md">
-			<p>
-				Houd deze site of <a
-					class="text-blue-600 hover:underline"
-					href="https://mastodon.xyz/@geensnor">Mastodon</a
-				> in de gaten voor meer informatie. Voor een fijn stukje interactie
-				kun je natuurlijk altijd terecht in onze <a
-					class="text-blue-600 hover:underline"
-					href="https://t.me/geensnor">Telegram groep</a
-				>
-			</p>
-		</div>
-	</div>
-	<Menu />
-	<JaarList />
-	<EditieList />
-	<div class="grid md:grid-cols-6 grid-cols-1">
-		<div class="md:col-start-2 md:col-span-4">
-			<WeetjesList />
-		</div>
-	</div>
-	<Slot />
+  <div class="grid justify-items-center">
+    <div class="p-4">
+      <ul class="list-outside">
+        <li>Datum: ergens in 2023</li>
+        <li>Starttijd: nog onbekend</li>
+        <li>Start en finish: nog onbekend</li>
+        <li>Route: nog onbekend</li>
+      </ul>
+    </div>
+    <div class="p-4 max-w-md">
+      <p>
+        Houd deze site of <a
+          class="text-blue-600 hover:underline"
+          href="https://mastodon.xyz/@geensnor">Mastodon</a
+        > in de gaten voor meer informatie. Voor een fijn stukje interactie kun je
+        natuurlijk altijd terecht in onze <a
+          class="text-blue-600 hover:underline"
+          href="https://t.me/geensnor">Telegram groep</a
+        >
+      </p>
+    </div>
+  </div>
+  <Menu />
+  <JaarList />
+  <EditieList />
+  <div class="grid md:grid-cols-6 grid-cols-1">
+    <div class="md:col-start-2 md:col-span-4">
+      <WeetjesList />
+    </div>
+  </div>
+  <Slot />
 </Layout>
 
 <style>
-	li {
-		font-size: 30px;
-		margin: 0;
-		padding: 0 0 0 40px;
-		list-style: none;
-		background-image: url("../favicon.ico");
-		background-repeat: no-repeat;
-		background-position: left center;
-		background-size: 27px;
-	}
+  li {
+    font-size: 30px;
+    margin: 0;
+    padding: 0 0 0 40px;
+    list-style: none;
+    background-image: url("../favicon.ico");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 27px;
+  }
 </style>

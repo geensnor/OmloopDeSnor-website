@@ -2,87 +2,80 @@
 import { Image, Picture } from "@astrojs/image/components";
 
 const {
-	naam,
-	datum,
-	start,
-	afstand,
-	hoogtemeters,
-	deelnemers,
-	fotoFilename,
-	gpxFile,
-	routeTitle,
-	routeURL,
-	aftermovieURL,
+  naam,
+  datum,
+  start,
+  afstand,
+  hoogtemeters,
+  deelnemers,
+  fotoFilename,
+  gpxFile,
+  routeTitle,
+  routeURL,
+  aftermovieURL,
 } = Astro.props;
 const jaar = new Date(datum).getFullYear();
 const nederlandseDatum = new Date(datum).toLocaleDateString("nl-NL", {
-	weekday: "long",
-	year: "numeric",
-	month: "long",
-	day: "numeric",
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 });
 ---
 
 <div
-	id={`jaar${jaar}`}
-	class="w-full md:w-5/6 bg-slate-50 border border-gray-300 shadow sm:rounded-lg my-6"
+  id={`jaar${jaar}`}
+  class="w-full md:w-5/6 bg-slate-50 border border-gray-300 shadow sm:rounded-lg my-6"
 >
-	<div class="p-1">
-		<div class="px-4 py-5 sm:px-6">
-			<h2 class="text-center text-4xl font-semibold text-orange-600">
-				{jaar}
-			</h2>
-			<h3 class="text-3xl text-center">{naam}</h3>
-		</div>
-	</div>
-	<div class="flex flex-row flex-wrap">
-		<div class="p-6 lg:w-1/3 md:w-1/2 full-w text-2xl">
-			<ul>
-				<li class="p-1">{nederlandseDatum}</li>
-				<li class="p-1">{start}</li>
-				<li class="p-1">{afstand} km</li>
-				<li class="p-1">{hoogtemeters} hoogtemeters</li>
-				<li class="p-1">{deelnemers} deelnemers gestart</li>
-				<li class="p-1">
-					<a
-						class="text-blue-600 hover:underline"
-						href={`gpx/${gpxFile}`}>GPX van de route</a
-					>
-				</li>
-				{
-					routeURL && (
-						<li class="p-1">
-							<a
-								class="text-blue-600 hover:underline"
-								href={routeURL}
-							>
-								{routeTitle}
-							</a>
-						</li>
-					)
-				}
-				{
-					aftermovieURL && (
-						<li class="p-1">
-							<a
-								class="text-blue-600 hover:underline"
-								href={aftermovieURL}
-							>
-								Aftermovie
-							</a>
-						</li>
-					)
-				}
-			</ul>
-		</div>
-		<div class="p-6 lg:w-2/3 md:w-1/2 md:content-end">
-			<Picture
-				src={import(`../assets/groepsfotos/${fotoFilename}.jpg`)}
-				widths={[200, 400, 800]}
-				sizes="(max-width: 800px) 100vw, 600px"
-				formats={["avif", "webp"]}
-				alt={`Groepsfoto Omloop De Snor ${jaar}`}
-			/>
-		</div>
-	</div>
+  <div class="p-1">
+    <div class="px-4 py-5 sm:px-6">
+      <h2 class="text-center text-4xl font-semibold text-orange-600">
+        {jaar}
+      </h2>
+      <h3 class="text-3xl text-center">{naam}</h3>
+    </div>
+  </div>
+  <div class="flex flex-row flex-wrap">
+    <div class="p-6 lg:w-1/3 md:w-1/2 full-w text-2xl">
+      <ul>
+        <li class="p-1">{nederlandseDatum}</li>
+        <li class="p-1">{start}</li>
+        <li class="p-1">{afstand} km</li>
+        <li class="p-1">{hoogtemeters} hoogtemeters</li>
+        <li class="p-1">{deelnemers} deelnemers gestart</li>
+        <li class="p-1">
+          <a class="text-blue-600 hover:underline" href={`gpx/${gpxFile}`}
+            >GPX van de route</a
+          >
+        </li>
+        {
+          routeURL && (
+            <li class="p-1">
+              <a class="text-blue-600 hover:underline" href={routeURL}>
+                {routeTitle}
+              </a>
+            </li>
+          )
+        }
+        {
+          aftermovieURL && (
+            <li class="p-1">
+              <a class="text-blue-600 hover:underline" href={aftermovieURL}>
+                Aftermovie
+              </a>
+            </li>
+          )
+        }
+      </ul>
+    </div>
+    <div class="p-6 lg:w-2/3 md:w-1/2 md:content-end">
+      <Picture
+        src={import(`../assets/groepsfotos/${fotoFilename}.jpg`)}
+        widths={[200, 400, 800]}
+        sizes="(max-width: 800px) 100vw, 600px"
+        formats={["avif", "webp"]}
+        alt={`Groepsfoto Omloop De Snor ${jaar}`}
+      />
+    </div>
+  </div>
 </div>
