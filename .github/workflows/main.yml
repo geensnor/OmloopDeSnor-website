@@ -1,0 +1,25 @@
+on: push
+name: Publish Omloop De Snor website
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v3
+      - name: Install, build, and upload your site
+        uses: withastro/action@v0
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: 45.82.191.81
+          username: git
+          password: ${{ secrets.ftppassword }}
+          dangerous-clean-slate: true
+          local-dir: ./dist/
+          
