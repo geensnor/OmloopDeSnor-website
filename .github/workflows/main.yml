@@ -22,4 +22,3 @@ jobs:
           password: ${{ secrets.ftppassword }}
           dangerous-clean-slate: true
           local-dir: ./dist/
-          
