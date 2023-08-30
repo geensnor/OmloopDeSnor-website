@@ -1,5 +1,5 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
 const {
   naam,
@@ -69,11 +69,9 @@ const nederlandseDatum = new Date(datum).toLocaleDateString("nl-NL", {
       </ul>
     </div>
     <div class="p-6 lg:w-2/3 md:w-1/2 md:content-end">
-      <Picture
+      <Image
         src={import(`../assets/groepsfotos/${fotoFilename}.jpg`)}
-        widths={[200, 400, 800]}
-        sizes="(max-width: 800px) 100vw, 600px"
-        formats={["avif", "webp"]}
+        width={600}
         alt={`Groepsfoto Omloop De Snor ${jaar}`}
       />
     </div>
