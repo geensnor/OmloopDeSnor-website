@@ -1,5 +1,14 @@
 [
   {
+    "naam": "Tour De Snor",
+    "datum": "2023-06-09",
+    "start": "Roermond",
+    "afstand": "334,32",
+    "hoogtemeters": 2545,
+    "deelnemers": 4,
+    "fotoFilename": "olds-2023"
+  },
+  {
     "naam": "De Jubileum editie",
     "datum": "2022-07-02",
     "start": "Schin op Geul",
