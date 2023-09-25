@@ -43,11 +43,14 @@ const nederlandseDatum = new Date(datum).toLocaleDateString("nl-NL", {
         <li class="p-1">{afstand} km</li>
         <li class="p-1">{hoogtemeters} hoogtemeters</li>
         <li class="p-1">{deelnemers} deelnemers gestart</li>
+                {
+          gpxFile && (
+
         <li class="p-1">
           <a class="text-blue-600 hover:underline" href={`gpx/${gpxFile}`}
             >GPX van de route</a
           >
-        </li>
+        </li>)}
         {
           routeURL && (
             <li class="p-1">
