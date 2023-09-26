@@ -5,12 +5,14 @@ import JaarList from "../components/JaarList.astro";
 import WeetjesList from "../components/WeetjesList.astro";
 import Menu from "../components/Menu.astro";
 import Slot from "../components/Slot.astro";
+
+const title = "Omloop de Snor 2024";
 ---
 
-<Layout title="Omloop de Snor 2024">
+<Layout {title}>
   <div>
     <h1 class="text-center text-6xl p-3 text-bold text-orange-600">
-      Omloop de Snor 2024
+      {title}
     </h1>
     <p class="text-center text-2xl p-3 text-gray-600">
       Twaalfde editie van de toertocht voor liefhebbers!
