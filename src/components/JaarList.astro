@@ -1,8 +1,11 @@
 ---
-import Editiesjson from "../../public/edities.json";
+import { getCollection } from "astro:content";
 
-const jaren = Editiesjson.map(function (element) {
-  return new Date(element.datum).getFullYear();
+const allEdities = await getCollection("edities");
+allEdities.sort((a, b) => parseFloat(a.id) - parseFloat(b.id));
+
+const jaren = allEdities.map(function (element) {
+  return new Date(element.data.datum).getFullYear();
 });
 ---
 

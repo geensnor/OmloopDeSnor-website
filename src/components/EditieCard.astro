@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-const {editie} = Astro.props;
+const { editie } = Astro.props;
 const jaar = new Date(editie.datum).getFullYear();
 const nederlandseDatum = new Date(editie.datum).toLocaleDateString("nl-NL", {
   weekday: "long",
@@ -9,6 +9,8 @@ const nederlandseDatum = new Date(editie.datum).toLocaleDateString("nl-NL", {
   month: "long",
   day: "numeric",
 });
+
+editie.afstand = editie.afstand.toFixed(2).replace(".", ",");
 ---
 
 <div
@@ -29,16 +31,22 @@ const nederlandseDatum = new Date(editie.datum).toLocaleDateString("nl-NL", {
         <li class="p-1">{nederlandseDatum}</li>
         <li class="p-1">{editie.start}</li>
         <li class="p-1">{editie.afstand} km</li>
-        <li class="p-1">{editie.hoogtemeters} hoogtemeters</li>
-        <li class="p-1">{editie.deelnemers} deelnemers gestart</li>
-                {
-          editie.gpxFile && (
-
         <li class="p-1">
-          <a class="text-blue-600 hover:underline" href={`gpx/${editie.gpxFile}`}
-            >GPX van de route</a
-          >
-        </li>)}
+          {editie.hoogtemeters} hoogtemeters
+        </li>
+        <li class="p-1">{editie.deelnemers} deelnemers gestart</li>
+        {
+          editie.gpxFile && (
+            <li class="p-1">
+              <a
+                class="text-blue-600 hover:underline"
+                href={`gpx/${editie.gpxFile}`}
+              >
+                GPX van de route
+              </a>
+            </li>
+          )
+        }
         {
           editie.routeURL && (
             <li class="p-1">
@@ -51,7 +59,10 @@ const nederlandseDatum = new Date(editie.datum).toLocaleDateString("nl-NL", {
         {
           editie.aftermovieURL && (
             <li class="p-1">
-              <a class="text-blue-600 hover:underline" href={editie.aftermovieURL}>
+              <a
+                class="text-blue-600 hover:underline"
+                href={editie.aftermovieURL}
+              >
                 Aftermovie
               </a>
             </li>
