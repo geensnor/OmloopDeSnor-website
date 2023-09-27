@@ -9,6 +9,8 @@ const nederlandseDatum = new Date(editie.datum).toLocaleDateString("nl-NL", {
   month: "long",
   day: "numeric",
 });
+
+editie.afstand = editie.afstand.toFixed(2).replace(".", ",");
 ---
 
 <div
@@ -29,7 +31,9 @@ const nederlandseDatum = new Date(editie.datum).toLocaleDateString("nl-NL", {
         <li class="p-1">{nederlandseDatum}</li>
         <li class="p-1">{editie.start}</li>
         <li class="p-1">{editie.afstand} km</li>
-        <li class="p-1">{editie.hoogtemeters} hoogtemeters</li>
+        <li class="p-1">
+          {editie.hoogtemeters} hoogtemeters
+        </li>
         <li class="p-1">{editie.deelnemers} deelnemers gestart</li>
         {
           editie.gpxFile && (

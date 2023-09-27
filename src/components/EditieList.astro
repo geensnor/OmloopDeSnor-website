@@ -1,14 +1,11 @@
 ---
 import EditieCard from "../components/EditieCard.astro";
-import Editiesjson from "../../public/edities.json";
+import { getCollection } from "astro:content";
+
+const allEdities = await getCollection("edities");
+allEdities.sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
 ---
 
 <div id="eerdere-edities" class="grid justify-items-center">
-  {
-    Editiesjson.map(
-      (editie) => (
-        <EditieCard editie={editie} />
-      )
-    )
-  }
+  {allEdities.map((editie) => <EditieCard editie={editie.data} />)}
 </div>
