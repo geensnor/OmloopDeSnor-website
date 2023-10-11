@@ -5,27 +5,23 @@ import JaarList from "../components/JaarList.astro";
 import WeetjesList from "../components/WeetjesList.astro";
 import Menu from "../components/Menu.astro";
 import Slot from "../components/Slot.astro";
+import { Knoepert, Lijstitem } from "@geensnor/astro-componenten";
 
 const title = "Omloop de Snor 2024";
 ---
 
 <Layout {title}>
   <div>
-    <h1 id="title" class="text-center text-6xl p-3 text-bold text-orange-600 font-slab">
-      {title}
-    </h1>
-    <p class="text-center text-2xl p-3 text-gray-600">
-      Twaalfde editie van de toertocht voor liefhebbers!
-    </p>
+    <Knoepert titel={title} subtekst="Twaalfde editie van de toertocht voor liefhebbers!" />
   </div>
 
   <div class="grid justify-items-center">
     <div class="p-4">
       <ul class="list-outside">
-        <li>Datum: ergens in 2024</li>
-        <li>Starttijd: nog onbekend</li>
-        <li>Start en finish: nog onbekend</li>
-        <li>Route: nog onbekend</li>
+        <Lijstitem inhoud="Datum: ergens in 2024" />
+        <Lijstitem inhoud="Starttijd: nog onbekend" />
+        <Lijstitem inhoud="Start en finish: nog onbekend" />
+        <Lijstitem inhoud="Route: nog onbekend" />
       </ul>
     </div>
     <div class="p-4 max-w-md">
@@ -53,14 +49,7 @@ const title = "Omloop de Snor 2024";
 </Layout>
 
 <style>
-  li {
-    font-size: 30px;
-    margin: 0;
-    padding: 0 0 0 40px;
-    list-style: none;
-    background-image: url("../favicon.ico");
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 27px;
+  ul {
+    font-size: 28px;
   }
 </style>
