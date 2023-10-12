@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Kop } from "@geensnor/astro-componenten";
 
 const allEdities = await getCollection("edities");
 allEdities.sort((a, b) => parseFloat(a.id) - parseFloat(b.id));
@@ -10,9 +11,7 @@ const jaren = allEdities.map(function (element) {
 ---
 
 <div class="text-center m-8">
-  <h2 class="text-center text-4xl font-semibold text-orange-600 font-slab">
-    Eerdere edities
-  </h2>
+  <Kop Type="h2" titel="Eerdere edities" />
   <ul class="list-none">
     {
       jaren.map((jaar) => (
