@@ -1,11 +1,12 @@
 ---
+import { Kop } from "@geensnor/astro-componenten";
 import Weetjesjson from "../../public/weetjes.json";
 ---
 
-<div id="weetjes">
-  <h2 class="text-center text-4xl font-semibold text-orange-600">
-    Omloop weetjes
-  </h2>
+<div class="mt-8 text-center" id="weetjes">
+  <Kop Type="h2" titel="Omloop weetjes" />
+</div>
+  <div>
   <ul class="list-disc">
     {
       Weetjesjson.map((weetje) => (
