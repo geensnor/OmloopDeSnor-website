@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@geensnor/astro-componenten": "^1.0.2",
-    "astro": "^4.10.2"
+    "astro": "^4.13.3"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",
