@@ -1,15 +1,15 @@
-// 1. Import utilities from `astro:content`
+
 import { z, defineCollection } from "astro:content";
-// 2. Define your collection(s)
+
 const editiesCollection = defineCollection({
-  type: "data", // v2.5.0 and later
+  type: "data",
   schema: z.object({
-    naam: z.string(),
-    datum: z.string().length(10),
-    start: z.string(),
-    afstand: z.number(),
-    hoogtemeters: z.number(),
-    deelnemers: z.number(),
+    naam: z.string().describe("Naam van de editie"),
+    datum: z.string().length(10).describe("Startdatum van de editie"),
+    start: z.string().describe("Startplaats van de editie"),
+    afstand: z.number().describe("Afgelegde afstand in kilometers"),
+    hoogtemeters: z.number().describe("Hoogtemeters"),
+    deelnemers: z.number().describe("Aantal deelnemers die zijn gestart"),
     fotoFilename: z.string(),
     routeTitle: z.string().optional(),
     routeURL: z.string().url().optional(),
