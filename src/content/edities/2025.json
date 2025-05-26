@@ -2,8 +2,10 @@
   "naam": "De Bazuinen van Jericho editie",
   "datum": "2025-05-23",
   "start": "Arnhem",
-  "afstand": 396.6,
+  "afstand": 363,
   "hoogtemeters": 1125,
   "deelnemers": 4,
-  "fotoFilename": "olds-2025"
+  "fotoFilename": "olds-2025",
+  "routeTitle": "Route op Komoot",
+  "routeURL": "https://www.komoot.com/collection/3501992/-tour-de-snor-25"
 }
