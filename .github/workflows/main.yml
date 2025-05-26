@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - master
+      - master
 name: Publish Omloop De Snor website
 
 permissions:
@@ -18,7 +18,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v0
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 45.82.191.81
           username: git
