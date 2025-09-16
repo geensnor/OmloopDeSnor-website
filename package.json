@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@geensnor/astro-componenten": "^1.0.2",
-    "astro": "^4.13.3"
+    "astro": "^5.8.0"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/tailwind": "^6.0.2",
     "husky": "^8.0.0",
     "prettier": "^2.8.3",
     "prettier-plugin-astro": "^0.8.0",
