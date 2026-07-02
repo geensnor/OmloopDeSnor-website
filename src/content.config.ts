@@ -1,8 +1,9 @@
-
-import { z, defineCollection } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
+import { glob } from "astro/loaders";
 
 const editiesCollection = defineCollection({
-  type: "data",
+  loader: glob({ pattern: "**/[^_]*.json", base: "./src/content/edities" }),
   schema: z.object({
     naam: z.string().describe("Naam van de editie"),
     datum: z.string().length(10).describe("Startdatum van de editie"),
@@ -12,9 +13,9 @@ const editiesCollection = defineCollection({
     deelnemers: z.number().describe("Aantal deelnemers die zijn gestart"),
     fotoFilename: z.string(),
     routeTitle: z.string().optional(),
-    routeURL: z.string().url().optional(),
+    routeURL: z.string().optional(),
     gpxFile: z.string().optional(),
-    aftermovieURL: z.string().url().optional(),
+    aftermovieURL: z.string().optional(),
   }),
 });
 // 3. Export a single `collections` object to register your collection(s)
