@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Migrated from tailwind.config.cjs: default sans font -> Work Sans */
+@theme {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+}
