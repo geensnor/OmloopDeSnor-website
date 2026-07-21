@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@geensnor/astro-componenten": "^1.0.2",
-    "astro": "^6.1.10"
+    "astro": "^7.1.0"
   },
   "overrides": {
     "vite": "^7.3.2"
